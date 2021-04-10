@@ -1,0 +1,3 @@
+读取 node3 hive.log 文件
+读取 node1 的 44444 端口
+聚合输出到 node2 的控制台
