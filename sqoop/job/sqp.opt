@@ -1,0 +1,8 @@
+export
+--connect jdbc:mysql://node3:3306/company
+--username root
+--password java521....
+--table staff
+--num-mappers 1
+--export-dir /user/hive/warehouse/staff_hive
+--input-fields-terminated-by "\t"
