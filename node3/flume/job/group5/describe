@@ -1,0 +1,9 @@
+多路复用
+a1 根据 event 中 Header 的某个 key 值
+通过 interceptor
+将不同的 event 发送到不同的 channel
+
+a2,a3 打印到控制台
+
+以端口数据模拟日志
+以数字，字母模拟不同类型的日志

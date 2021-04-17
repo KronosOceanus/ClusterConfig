@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+	<!-- hive 连接 zookeeper 操作 hbase -->
+	<property>
+		<name>hive.zookeeper.quorum</name>
+		<value>node1,node2,node3</value>
+	</property>
+	<property>
+		<name>hive.zookeeper.client.port</name>
+		<value>2181</value>
+	</property>
+
+
+	<!-- 代码 jar 存放位置 -->
+	<!--<property>
+		<name>hive.aux.jars.path</name>
+		<value>file:///usr/local/hive/auxlib/*</value>
+	</property>-->
+
+	<!-- mysql 用户名 -->
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>root</value>
+	</property>
+	
+	<!-- 密码 -->
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>java521....</value>
+	</property>
+	
+	<!-- mysql 地址，不存在则创建 -->
+	<property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://node3:3306/hive?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+	</property>
+	
+	<!-- 驱动 -->
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.cj.jdbc.Driver</value>
+	</property>
+	
+	<!-- 数据库文件在 hdfs 上默认存储位置 -->
+	<property>
+		<name>hive.metastore.warehouse.dir</name>
+		<value>hdfs://node1:8020/user/hive/warehouse</value>
+	</property>
+	
+	<!-- 元数据是否校验 -->
+	<property>
+		<name>hive.metastore.schema.verification</name>
+		<value>false</value>
+	</property>
+	
+	<!-- 自动创建核心数据文件 -->
+	<property>
+		<name>datanucleus.schema.autoCreateAll</name>
+		<value>true</value>
+	</property>
+	
+	<!-- thrift 服务器绑定主机 -->
+	<property>
+		<name>hive.server2.thrift.bind.host</name>
+		<value>node3</value>
+	</property>
+
+
+	<property>
+    		<name>hive.support.concurrency</name>
+    		<value>true</value>
+	</property>
+	<property>
+    		<name>hive.txn.manager</name>
+    		<value>org.apache.hadoop.hive.ql.lockmgr.DbTxnManager</value>
+	</property>
+
+</configuration>

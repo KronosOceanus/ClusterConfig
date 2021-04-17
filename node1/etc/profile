@@ -36,6 +36,7 @@ export PATH=$PATH:$JRE_HOME/bin
 # hadoop
 export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 
 # java+hadoop
 export CLASSPATH=$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib:$HADOOP_HOME/share/hadoop/common/*:$HADOOP_HOME/share/hadoop/common/lib/*
