@@ -1,0 +1,10 @@
+<azkaban-users>
+  <user groups="azkaban" password="azkaban" roles="admin" username="azkaban"/>
+  <user password="metrics" roles="metrics" username="metrics"/>
+
+
+  <user password="java521...." roles="admin" username="kronos"/>
+
+  <role name="admin" permissions="ADMIN"/>
+  <role name="metrics" permissions="METRICS"/>
+</azkaban-users>
