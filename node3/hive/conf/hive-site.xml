@@ -13,6 +13,11 @@
 		<value>2181</value>
 	</property>
 
+	<!-- 加载 atlas hivehook -->
+	<property>
+		<name>hive.exec.post.hooks</name>
+		<value>org.apache.atlas.hive.hook.HiveHook</value>
+	</property>
 
 	<!-- 代码 jar 存放位置 -->
 	<!--<property>

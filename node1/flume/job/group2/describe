@@ -1,3 +1,4 @@
-读取 node3 44444 端口
-传输到 node1，node2
+故障转移
+a1 读取 node3 44444 端口
+a2,a3 传输到 node1，node2
 优先级 node2 比较大

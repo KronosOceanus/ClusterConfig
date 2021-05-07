@@ -1,0 +1,49 @@
+hive调优:
+输入，中间合并小文件
+中间，输出压缩(orc/parquet+snappy)
+本地fetch
+job并行
+jvm重用
+设置reduce数
+预聚合
+双job
+
+sql优化:
+​谓词下坠
+​union all+group by
+​in代替join
+​优化子查询中的group by 、 COUNT(DISTINCT)，MAX，MIN
+group by代替count(distinct)​
+​mapjoin/smbjoin
+
+数据倾斜​:
+​空值过滤/转换
+热点单独处理
+预聚合
+双job
+group by代替count(distinct)​
+mapjoin
+----------------------------------------------------------------
+kafka优点:
+分段
+稀疏索引
+顺序读写
+零拷贝​
+批量发送
+数据压缩​
+
+高吞吐，低延迟
+​热扩展
+​持久化
+容错​
+高并发​，负载均衡
+----------------------------------------------------------------
+hbase调优:
+​高可用
+​预分区(rowKey设计:
+  长度<16字节，8字节对齐，内存高效利用
+  hash，随机数，反转)
+table可以缓存，所以可以多分配jvm堆内存
+​列族压缩
+少用多列族(flush磁盘分配不均)​
+布隆过滤器

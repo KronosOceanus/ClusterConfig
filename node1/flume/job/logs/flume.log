@@ -1,0 +1,956 @@
+24 Mar 2021 04:15:17,521 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:62)  - Configuration provider starting
+24 Mar 2021 04:15:17,529 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:134)  - Reloading configuration file:/usr/local/flume/job/group2/flume2.conf
+24 Mar 2021 04:15:17,535 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:15:17,536 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:930)  - Added sinks: k1 Agent: a2
+24 Mar 2021 04:15:17,536 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:15:17,580 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:140)  - Post-validation flume configuration contains configuration for agents: [a2]
+24 Mar 2021 04:15:17,581 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:147)  - Creating channels
+24 Mar 2021 04:15:17,590 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type memory
+24 Mar 2021 04:15:17,596 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:201)  - Created channel c1
+24 Mar 2021 04:15:17,601 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type avro
+24 Mar 2021 04:15:17,612 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: k1, type: logger
+24 Mar 2021 04:15:17,615 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:116)  - Channel c1 connected to [r1, k1]
+24 Mar 2021 04:15:17,617 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:137)  - Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:Avro source r1: { bindAddress: node1, port: 4141 } }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@7b5c9eff counterGroup:{ name:null counters:{} } }} channels:{c1=org.apache.flume.channel.MemoryChannel{name: c1}} }
+24 Mar 2021 04:15:17,619 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:144)  - Starting Channel c1
+24 Mar 2021 04:15:17,695 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+24 Mar 2021 04:15:17,696 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: c1 started
+24 Mar 2021 04:15:17,699 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:171)  - Starting Sink k1
+24 Mar 2021 04:15:17,701 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:182)  - Starting Source r1
+24 Mar 2021 04:15:17,702 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.AvroSource.start:234)  - Starting Avro source r1: { bindAddress: node1, port: 4141 }...
+24 Mar 2021 04:15:18,163 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SOURCE, name: r1: Successfully registered new MBean.
+24 Mar 2021 04:15:18,163 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SOURCE, name: r1 started
+24 Mar 2021 04:15:18,165 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.source.AvroSource.start:260)  - Avro source r1 started.
+24 Mar 2021 04:15:27,170 INFO  [New I/O server boss #5] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 => /192.168.106.129:4141] OPEN
+24 Mar 2021 04:15:27,172 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 => /192.168.106.129:4141] BOUND: /192.168.106.129:4141
+24 Mar 2021 04:15:27,172 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 => /192.168.106.129:4141] CONNECTED: /192.168.106.131:52156
+24 Mar 2021 04:17:35,839 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 10
+24 Mar 2021 04:17:35,840 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: c1 stopped
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1616584517696
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1616584655840
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 0
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 0
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 19
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+24 Mar 2021 04:17:35,841 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:84)  - Configuration provider stopping
+24 Mar 2021 04:17:35,842 INFO  [agent-shutdown-hook] (org.apache.flume.source.AvroSource.stop:297)  - Avro source r1 stopping: Avro source r1: { bindAddress: node1, port: 4141 }
+24 Mar 2021 04:17:35,847 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 :> /192.168.106.129:4141] DISCONNECTED
+24 Mar 2021 04:17:35,847 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 :> /192.168.106.129:4141] UNBOUND
+24 Mar 2021 04:17:35,848 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.handleUpstream:171)  - [id: 0xa89fc941, /192.168.106.131:52156 :> /192.168.106.129:4141] CLOSED
+24 Mar 2021 04:17:35,848 INFO  [New I/O worker #1] (org.apache.avro.ipc.NettyServer$NettyServerAvroHandler.channelClosed:209)  - Connection to /192.168.106.131:52156 disconnected.
+24 Mar 2021 04:17:35,858 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SOURCE, name: r1 stopped
+24 Mar 2021 04:17:35,858 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SOURCE, name: r1. source.start.time == 1616584518163
+24 Mar 2021 04:17:35,858 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SOURCE, name: r1. source.stop.time == 1616584655858
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.append-batch.accepted == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.append-batch.received == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.append.accepted == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.append.received == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.events.accepted == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.events.received == 0
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SOURCE, name: r1. src.open-connection.count == 1
+24 Mar 2021 04:17:35,859 INFO  [agent-shutdown-hook] (org.apache.flume.source.AvroSource.stop:323)  - Avro source r1 stopped. Metrics: SOURCE:r1{src.events.accepted=0, src.open-connection.count=1, src.append.received=0, src.append-batch.received=0, src.append-batch.accepted=0, src.append.accepted=0, src.events.received=0}
+24 Mar 2021 04:54:37,056 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:62)  - Configuration provider starting
+24 Mar 2021 04:54:37,065 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:134)  - Reloading configuration file:/usr/local/flume/job/group4/flume2.conf
+24 Mar 2021 04:54:37,072 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:54:37,072 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:54:37,072 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:930)  - Added sinks: k1 Agent: a2
+24 Mar 2021 04:54:37,075 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:54:37,076 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:54:37,094 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:140)  - Post-validation flume configuration contains configuration for agents: [a2]
+24 Mar 2021 04:54:37,094 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:147)  - Creating channels
+24 Mar 2021 04:54:37,100 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type memory
+24 Mar 2021 04:54:37,106 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:201)  - Created channel c1
+24 Mar 2021 04:54:37,108 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type netcat
+24 Mar 2021 04:54:37,113 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: k1, type: avro
+24 Mar 2021 04:54:37,117 INFO  [conf-file-poller-0] (org.apache.flume.sink.AbstractRpcSink.configure:183)  - Connection reset is set to 0. Will not reset connection to next hop
+24 Mar 2021 04:54:37,119 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:116)  - Channel c1 connected to [r1, k1]
+24 Mar 2021 04:54:37,121 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:137)  - Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.NetcatSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@59c6da8a counterGroup:{ name:null counters:{} } }} channels:{c1=org.apache.flume.channel.MemoryChannel{name: c1}} }
+24 Mar 2021 04:54:37,124 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:144)  - Starting Channel c1
+24 Mar 2021 04:54:37,214 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+24 Mar 2021 04:54:37,215 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: c1 started
+24 Mar 2021 04:54:37,215 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:171)  - Starting Sink k1
+24 Mar 2021 04:54:37,216 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:287)  - Starting RpcSink k1 { host: node2, port: 4141 }...
+24 Mar 2021 04:54:37,217 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+24 Mar 2021 04:54:37,217 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:182)  - Starting Source r1
+24 Mar 2021 04:54:37,218 INFO  [lifecycleSupervisor-1-4] (org.apache.flume.source.NetcatSource.start:155)  - Source starting
+24 Mar 2021 04:54:37,217 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: k1 started
+24 Mar 2021 04:54:37,220 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:37,220 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:37,240 INFO  [lifecycleSupervisor-1-4] (org.apache.flume.source.NetcatSource.start:166)  - Created serverSocket:sun.nio.ch.ServerSocketChannelImpl[/127.0.0.1:44444]
+24 Mar 2021 04:54:37,264 WARN  [lifecycleSupervisor-1-1] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:37,408 WARN  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:292)  - Unable to create Rpc client using hostname: node2, port: 4141
+org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.start(AbstractRpcSink.java:290)
+	at org.apache.flume.sink.DefaultSinkProcessor.start(DefaultSinkProcessor.java:45)
+	at org.apache.flume.SinkRunner.start(SinkRunner.java:79)
+	at org.apache.flume.lifecycle.LifecycleSupervisor$MonitorRunnable.run(LifecycleSupervisor.java:249)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 16 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+24 Mar 2021 04:54:37,412 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:301)  - Rpc sink k1 started.
+24 Mar 2021 04:54:37,415 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:37,416 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:37,417 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:37,422 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:54:42,424 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:42,424 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:42,425 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:42,447 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:54:47,450 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:47,451 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:47,452 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:47,469 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:54:52,475 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:52,476 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:52,477 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:52,498 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:54:57,500 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:54:57,501 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:54:57,502 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:54:57,513 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:02,514 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:02,516 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:02,516 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:02,527 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:07,531 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:07,532 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:07,532 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:07,539 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:12,541 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:12,543 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:12,544 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:12,563 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:17,569 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:17,570 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:17,570 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:17,575 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:22,581 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:22,582 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:22,583 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:22,593 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:27,595 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:27,595 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:27,595 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:27,599 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:32,603 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:32,604 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:32,605 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:32,618 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:37,620 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:37,620 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:37,621 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:37,630 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:42,632 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:42,633 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:42,634 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:42,644 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:47,648 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:47,649 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:47,651 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:47,656 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:52,658 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:52,659 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:52,659 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:52,669 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:55:57,670 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:55:57,671 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:55:57,671 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:55:57,681 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:56:01,424 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 10
+24 Mar 2021 04:56:01,427 INFO  [agent-shutdown-hook] (org.apache.flume.source.NetcatSource.stop:197)  - Source stopping
+24 Mar 2021 04:56:01,929 INFO  [agent-shutdown-hook] (org.apache.flume.sink.AbstractRpcSink.stop:306)  - Rpc sink k1 stopping...
+24 Mar 2021 04:56:01,929 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: k1 stopped
+24 Mar 2021 04:56:01,929 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: k1. sink.start.time == 1616586877217
+24 Mar 2021 04:56:01,929 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: k1. sink.stop.time == 1616586961929
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.complete == 0
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.empty == 0
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.underflow == 0
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.closed.count == 0
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.creation.count == 0
+24 Mar 2021 04:56:01,930 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.failed.count == 18
+24 Mar 2021 04:56:01,931 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.attempt == 0
+24 Mar 2021 04:56:01,931 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.sucess == 0
+24 Mar 2021 04:56:01,931 INFO  [agent-shutdown-hook] (org.apache.flume.sink.AbstractRpcSink.stop:320)  - Rpc sink k1 stopped. Metrics: SINK:k1{sink.batch.underflow=0, sink.connection.failed.count=18, sink.connection.closed.count=0, sink.event.drain.attempt=0, sink.batch.complete=0, sink.event.drain.sucess=0, sink.connection.creation.count=0, sink.batch.empty=0}
+24 Mar 2021 04:56:01,931 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: c1 stopped
+24 Mar 2021 04:56:01,931 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1616586877215
+24 Mar 2021 04:56:01,932 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1616586961931
+24 Mar 2021 04:56:01,932 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000
+24 Mar 2021 04:56:01,932 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 3
+24 Mar 2021 04:56:01,932 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 3
+24 Mar 2021 04:56:01,933 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 3
+24 Mar 2021 04:56:01,933 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 0
+24 Mar 2021 04:56:01,933 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 0
+24 Mar 2021 04:56:01,933 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:84)  - Configuration provider stopping
+24 Mar 2021 04:57:15,976 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:62)  - Configuration provider starting
+24 Mar 2021 04:57:15,984 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:134)  - Reloading configuration file:/usr/local/flume/job/group4/flume2.conf
+24 Mar 2021 04:57:15,991 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:57:15,992 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:57:15,992 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:930)  - Added sinks: k1 Agent: a2
+24 Mar 2021 04:57:15,992 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:57:15,993 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+24 Mar 2021 04:57:16,007 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:140)  - Post-validation flume configuration contains configuration for agents: [a2]
+24 Mar 2021 04:57:16,007 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:147)  - Creating channels
+24 Mar 2021 04:57:16,020 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type memory
+24 Mar 2021 04:57:16,028 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:201)  - Created channel c1
+24 Mar 2021 04:57:16,030 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type netcat
+24 Mar 2021 04:57:16,036 INFO  [conf-file-poller-0] (org.apache.flume.sink.DefaultSinkFactory.create:42)  - Creating instance of sink: k1, type: avro
+24 Mar 2021 04:57:16,039 INFO  [conf-file-poller-0] (org.apache.flume.sink.AbstractRpcSink.configure:183)  - Connection reset is set to 0. Will not reset connection to next hop
+24 Mar 2021 04:57:16,042 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.getConfiguration:116)  - Channel c1 connected to [r1, k1]
+24 Mar 2021 04:57:16,044 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:137)  - Starting new configuration:{ sourceRunners:{r1=EventDrivenSourceRunner: { source:org.apache.flume.source.NetcatSource{name:r1,state:IDLE} }} sinkRunners:{k1=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@59c6da8a counterGroup:{ name:null counters:{} } }} channels:{c1=org.apache.flume.channel.MemoryChannel{name: c1}} }
+24 Mar 2021 04:57:16,046 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:144)  - Starting Channel c1
+24 Mar 2021 04:57:16,090 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: CHANNEL, name: c1: Successfully registered new MBean.
+24 Mar 2021 04:57:16,090 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: CHANNEL, name: c1 started
+24 Mar 2021 04:57:16,090 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:171)  - Starting Sink k1
+24 Mar 2021 04:57:16,091 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:287)  - Starting RpcSink k1 { host: node2, port: 4141 }...
+24 Mar 2021 04:57:16,091 INFO  [conf-file-poller-0] (org.apache.flume.node.Application.startAllComponents:182)  - Starting Source r1
+24 Mar 2021 04:57:16,091 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.register:119)  - Monitored counter group for type: SINK, name: k1: Successfully registered new MBean.
+24 Mar 2021 04:57:16,092 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.instrumentation.MonitoredCounterGroup.start:95)  - Component type: SINK, name: k1 started
+24 Mar 2021 04:57:16,092 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.source.NetcatSource.start:155)  - Source starting
+24 Mar 2021 04:57:16,092 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:57:16,092 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:57:16,097 INFO  [lifecycleSupervisor-1-2] (org.apache.flume.source.NetcatSource.start:166)  - Created serverSocket:sun.nio.ch.ServerSocketChannelImpl[/127.0.0.1:44444]
+24 Mar 2021 04:57:16,108 WARN  [lifecycleSupervisor-1-1] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:57:16,263 WARN  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:292)  - Unable to create Rpc client using hostname: node2, port: 4141
+org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.start(AbstractRpcSink.java:290)
+	at org.apache.flume.sink.DefaultSinkProcessor.start(DefaultSinkProcessor.java:45)
+	at org.apache.flume.SinkRunner.start(SinkRunner.java:79)
+	at org.apache.flume.lifecycle.LifecycleSupervisor$MonitorRunnable.run(LifecycleSupervisor.java:249)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 16 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	... 3 more
+24 Mar 2021 04:57:16,265 INFO  [lifecycleSupervisor-1-1] (org.apache.flume.sink.AbstractRpcSink.start:301)  - Rpc sink k1 started.
+24 Mar 2021 04:57:16,269 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:57:16,269 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:57:16,270 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:57:16,273 ERROR [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.SinkRunner$PollingRunner.run:158)  - Unable to deliver event. Exception follows.
+org.apache.flume.EventDeliveryException: Failed to send events
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:389)
+	at org.apache.flume.sink.DefaultSinkProcessor.process(DefaultSinkProcessor.java:67)
+	at org.apache.flume.SinkRunner$PollingRunner.run(SinkRunner.java:145)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.flume.FlumeException: NettyAvroRpcClient { host: node2, port: 4141 }: RPC connection error
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:181)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:120)
+	at org.apache.flume.api.NettyAvroRpcClient.configure(NettyAvroRpcClient.java:638)
+	at org.apache.flume.api.RpcClientFactory.getInstance(RpcClientFactory.java:90)
+	at org.apache.flume.sink.AvroSink.initializeRpcClient(AvroSink.java:127)
+	at org.apache.flume.sink.AbstractRpcSink.createConnection(AbstractRpcSink.java:210)
+	at org.apache.flume.sink.AbstractRpcSink.verifyConnection(AbstractRpcSink.java:270)
+	at org.apache.flume.sink.AbstractRpcSink.process(AbstractRpcSink.java:346)
+	... 3 more
+Caused by: java.io.IOException: Error connecting to node2/192.168.106.130:4141
+	at org.apache.avro.ipc.NettyTransceiver.getChannel(NettyTransceiver.java:261)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:203)
+	at org.apache.avro.ipc.NettyTransceiver.<init>(NettyTransceiver.java:152)
+	at org.apache.flume.api.NettyAvroRpcClient.connect(NettyAvroRpcClient.java:169)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: node2/192.168.106.130:4141
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.connect(NioClientBoss.java:152)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.processSelectedKeys(NioClientBoss.java:105)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.process(NioClientBoss.java:79)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+	at org.jboss.netty.channel.socket.nio.NioClientBoss.run(NioClientBoss.java:42)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	... 1 more
+24 Mar 2021 04:57:21,275 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AbstractRpcSink.createConnection:205)  - Rpc sink k1: Building RpcClient with hostname: node2, port: 4141
+24 Mar 2021 04:57:21,275 INFO  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.sink.AvroSink.initializeRpcClient:126)  - Attempting to create Avro Rpc client.
+24 Mar 2021 04:57:21,276 WARN  [SinkRunner-PollingRunner-DefaultSinkProcessor] (org.apache.flume.api.NettyAvroRpcClient.configure:634)  - Using default maxIOWorkers
+24 Mar 2021 04:58:24,917 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 10
+24 Mar 2021 04:58:24,920 INFO  [agent-shutdown-hook] (org.apache.flume.source.NetcatSource.stop:197)  - Source stopping
+24 Mar 2021 04:58:25,423 INFO  [agent-shutdown-hook] (org.apache.flume.sink.AbstractRpcSink.stop:306)  - Rpc sink k1 stopping...
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: SINK, name: k1 stopped
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: SINK, name: k1. sink.start.time == 1616587036092
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: SINK, name: k1. sink.stop.time == 1616587105430
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.complete == 0
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.empty == 10
+24 Mar 2021 04:58:25,430 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.batch.underflow == 4
+24 Mar 2021 04:58:25,431 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.closed.count == 1
+24 Mar 2021 04:58:25,431 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.creation.count == 1
+24 Mar 2021 04:58:25,431 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.connection.failed.count == 2
+24 Mar 2021 04:58:25,438 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.attempt == 4
+24 Mar 2021 04:58:25,438 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: SINK, name: k1. sink.event.drain.sucess == 4
+24 Mar 2021 04:58:25,438 INFO  [agent-shutdown-hook] (org.apache.flume.sink.AbstractRpcSink.stop:320)  - Rpc sink k1 stopped. Metrics: SINK:k1{sink.batch.underflow=4, sink.connection.failed.count=2, sink.connection.closed.count=1, sink.event.drain.attempt=4, sink.batch.complete=0, sink.event.drain.sucess=4, sink.connection.creation.count=1, sink.batch.empty=10}
+24 Mar 2021 04:58:25,438 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:149)  - Component type: CHANNEL, name: c1 stopped
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:155)  - Shutdown Metric for type: CHANNEL, name: c1. channel.start.time == 1616587036090
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:161)  - Shutdown Metric for type: CHANNEL, name: c1. channel.stop.time == 1616587105438
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.capacity == 1000
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.current.size == 0
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.attempt == 4
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.put.success == 4
+24 Mar 2021 04:58:25,439 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.attempt == 18
+24 Mar 2021 04:58:25,445 INFO  [agent-shutdown-hook] (org.apache.flume.instrumentation.MonitoredCounterGroup.stop:177)  - Shutdown Metric for type: CHANNEL, name: c1. channel.event.take.success == 4
+24 Mar 2021 04:58:25,445 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:84)  - Configuration provider stopping
+29 Mar 2021 01:28:09,862 INFO  [lifecycleSupervisor-1-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.start:62)  - Configuration provider starting
+29 Mar 2021 01:28:09,875 INFO  [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:134)  - Reloading configuration file:/usr/local/flume/job/mysource.conf
+29 Mar 2021 01:28:09,882 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:930)  - Added sinks: k1 Agent: a1
+29 Mar 2021 01:28:09,883 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+29 Mar 2021 01:28:09,883 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration$AgentConfiguration.addProperty:1016)  - Processing:k1
+29 Mar 2021 01:28:09,909 INFO  [conf-file-poller-0] (org.apache.flume.conf.FlumeConfiguration.validateConfiguration:140)  - Post-validation flume configuration contains configuration for agents: [a1]
+29 Mar 2021 01:28:09,909 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:147)  - Creating channels
+29 Mar 2021 01:28:09,918 INFO  [conf-file-poller-0] (org.apache.flume.channel.DefaultChannelFactory.create:42)  - Creating instance of channel c1 type memory
+29 Mar 2021 01:28:09,922 INFO  [conf-file-poller-0] (org.apache.flume.node.AbstractConfigurationProvider.loadChannels:201)  - Created channel c1
+29 Mar 2021 01:28:09,924 INFO  [conf-file-poller-0] (org.apache.flume.source.DefaultSourceFactory.create:41)  - Creating instance of source r1, type flume_source.MySource
+29 Mar 2021 01:28:09,925 ERROR [conf-file-poller-0] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run:143)  - Failed to load configuration data. Exception follows.
+org.apache.flume.FlumeException: Unable to load source type: flume_source.MySource, class: flume_source.MySource
+	at org.apache.flume.source.DefaultSourceFactory.getClass(DefaultSourceFactory.java:68)
+	at org.apache.flume.source.DefaultSourceFactory.create(DefaultSourceFactory.java:42)
+	at org.apache.flume.node.AbstractConfigurationProvider.loadSources(AbstractConfigurationProvider.java:323)
+	at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:101)
+	at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: flume_source.MySource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at org.apache.flume.source.DefaultSourceFactory.getClass(DefaultSourceFactory.java:66)
+	... 11 more
+29 Mar 2021 01:28:16,176 INFO  [agent-shutdown-hook] (org.apache.flume.lifecycle.LifecycleSupervisor.stop:78)  - Stopping lifecycle supervisor 10
+29 Mar 2021 01:28:16,178 INFO  [agent-shutdown-hook] (org.apache.flume.node.PollingPropertiesFileConfigurationProvider.stop:84)  - Configuration provider stopping

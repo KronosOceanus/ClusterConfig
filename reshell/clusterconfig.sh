@@ -20,7 +20,9 @@ cp -r /usr/local/sqoop/job /root/cluster_config/sqoop&
 cp -r /usr/local/flink/conf /root/cluster_config/flink&
 cp -r /usr/local/azkaban/azkaban-exec-server/conf /root/cluster_config/azkaban&
 cp -r /usr/local/azkaban/azkaban-web-server/conf /root/cluster_config/azkaban&
-cp -r /usr/local/azkaban/azkaban-exec-server/plugins /root/cluster_config/azkaban&cp -r /usr/local/azkaban/azkaban-web-server/plugins /root/cluster_config/azkaban"
+cp -r /usr/local/azkaban/azkaban-exec-server/plugins /root/cluster_config/azkaban&
+cp -r /usr/local/azkaban/azkaban-web-server/plugins /root/cluster_config/azkaban&
+cp -r /usr/local/solr/bin /root/cluster_config/solr"
 	done
 };;
 esac

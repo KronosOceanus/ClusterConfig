@@ -54,3 +54,4 @@ export HIVE_CONF_DIR=/usr/local/hive/conf
 
 # Folder containing extra libraries required for hive compilation/execution can be controlled by:
 # export HIVE_AUX_JARS_PATH=
+export HIVE_AUX_JAR_PATH=/usr/local/atlas/hook/hive
